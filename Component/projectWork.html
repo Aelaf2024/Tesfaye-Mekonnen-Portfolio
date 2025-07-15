@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MentorGuide • Tesfaye’s Résumé Agent</title>
+  <link rel="stylesheet" href="../electronics-advisor/CSS/electronics-advisor.css" />
+  <link rel="stylesheet" href="../CSS/mentor-guide.css" />
+  <link rel="stylesheet" href="../CSS/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+</head>
+<body>
+
+  <div class="title">  
+    <h1 class="site-title">AI-Powered Project ShowCase</h1>
+    <p class="site-subtitle">Mentor Gided Skills Summary </p>
+</div>
+<header class="logo-title">
+    <nav class="navbar">
+        <div class="language-switch">
+            <input type="checkbox" id="language-toggle" class="language-toggle">
+            <label for="language-toggle" class="language-label">
+                <span class="lang-text active-lang">EN</span>
+                <span class="lang-text">AM</span>
+                <div class="toggle-slider"></div>
+            </label>
+        </div>
+        <ul class="menu-list">
+          <li><a href="../index.html" class="nav-link">🏠 Home</a></li>
+          <li><a href="mentorGides.html " class="nav-link">🧭 MentorGuide</a></li>
+          <li><a href="projectWork.html" class="nav-link">🧪 ProjectWork</a></li>
+          <li><a href="learning.html" class="nav-link">📚 Learning Journey</a></li>
+          <li><a href="connect.html" class="nav-link">🤝 Connect</a></li>
+        </ul>
+      </ul>
+      <div class="hamburger" id="hamburger-icon">
+          &#9776;
+      </div>
+  </nav>
+</header>
+
+  <main class="mentor-wrapper">
+    <div class="mentor-header">
+      <h1>🧭 MentorGuide 🧭</h1>
+      <p>Trained on Tesfaye’s résumé journey. Choose a path to explore:</p>
+    </div>
+
+    <section class="mentor-tabs">
+      <button onclick="handleExperienceBranch('work')">1️⃣ Work Experience</button>
+      <button onclick="handleExperienceBranch('projects')">2️⃣ Project Showcase</button>
+    </section>
+ <!-- Dynamic content goes here -->
+  
+    <section class="mentor-output" id="mentorResponse"></section>
+   <!--   <section class="project-showcase">
+      <div class="project-card">
+          <h3>TutorFinder: Student-Teacher Matching</h3>
+          <p>An AI-powered web application to connect students with the right teachers based on their specific subject questions.</p>
+          <a href="projects/TutorFinder/index.html" class="btn btn-primary">View Project</a>
+          <a href="https://github.com/yourusername/yourrepo/tree/main/projects/TutorFinder" target="_blank" class="btn btn-secondary">GitHub Repo</a>
+      </div>
+      </section>  -->
+  </main>
+
+  <footer>
+    <p>© 2025 Tesfaye Mekonnen • Built with purpose and code</p>
+  </footer>
+ <!-- Scripts -->
+   <script src="../JS/script.js"></script>
+   <script src="../JS/MentorData.js"></script>
+   <script src="../JS/mentorGuide.js"></script>
+   <script src="../electronics-advisor/JS/electronics-advisor.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>AOS.init();</script>
+</body>
+</html>
+

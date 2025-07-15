@@ -1,0 +1,357 @@
+:root {
+  --primary-color: #4c5cff;
+  --font-size-base: 1rem;
+  --spacing-sm: 0.5rem;
+}
+
+.tutor-name {
+  color: var(--primary-color);
+  font-size: var(--font-size-base);
+}
+
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+/* ✅ Good */
+.tab-button.active {
+  background-color: var(--primary-color);
+}
+
+
+.loading-spinner {
+  will-change: transform;
+}
+
+
+.tutor-project-intro{
+    text-align: center;
+}
+
+
+
+/* Tutor Finder CSS Styles*/
+
+.tutor{
+    font-size: large;
+    text-align: center;
+}
+
+img{
+    width: 300px;
+    height: 300px;
+}
+
+/* tutor.css */
+.main-container {
+   display: grid; /* Enables CSS Grid */
+  grid-template-columns: 1fr 1fr; /* Creates two equal columns (1 fraction each) */
+  gap: 20px; /* Adds a gap between columns */
+}
+
+
+/* --- Tabs Container --- */
+.tabs-container {
+    color: red;
+    background-color: #007bff;
+    margin-top: 30px;
+    background-color: var(--card-bg-color, #ffffff); /* Use card background or similar */
+    border-radius: 8px;
+    box-shadow: var(--box-shadow, 0 2px 10px rgba(0, 0, 0, 0.08));
+    overflow: hidden; /* Important for border-radius */
+}
+
+/* --- Tab Buttons (Navigation) --- */
+.tab-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    border-bottom: 1px solid var(--border-color, #ddd); /* Separator below buttons */
+    background-color: var(--background-color-light, #f8f8f8); /* Slightly different background for buttons */
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--secondary-text-color, #555);
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    flex-grow: 1; /* Make buttons expand to fill space */
+    text-align: center;
+    border-bottom: 3px solid transparent; /* For active indicator */
+}
+
+.tab-button:hover {
+    color: var(--accent-color, #007bff);
+    background-color: var(--hover-color, #f0f0f0);
+}
+
+.tab-button.active {
+    color: var(--accent-color, #007bff);
+    border-bottom: 3px solid var(--accent-color, #007bff);
+    background-color: var(--card-bg-color, #ffffff); /* Match content background */
+}
+
+/* --- Tab Content Panes --- */
+.tab-pane {
+    padding: 25px;
+    display: none; /* Hide all tab panes by default */
+}
+
+.tab-pane.active {
+    display: block; /* Show the active tab pane */
+}
+
+.tab-pane h3 {
+    color: var(--primary-text-color, #333);
+    margin-bottom: 15px;
+}
+
+.tab-pane ul {
+    list-style: disc;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.tab-pane ul li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 600px) {
+    .tab-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+    }
+    .tab-button {
+        border-bottom: 1px solid var(--border-color, #ddd); /* Add border between stacked buttons */
+        border-right: none;
+    }
+    .tab-button.active {
+        border-bottom: 3px solid var(--accent-color, #007bff);
+    }
+}
+
+/* tutor.css */
+
+/* ... (existing styles) ... */
+
+/* Adjustments for 5 Tab Buttons */
+.tab-buttons {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly for 5 buttons */
+    border-bottom: 1px solid var(--border-color, #ddd);
+    background-color: var(--background-color-light, #f8f8f8);
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+}
+
+.tab-button {
+    /* Existing styles... */
+    padding: 12px 15px; /* Slightly reduced padding for more buttons */
+    font-size: 1em; /* Slightly smaller font if needed */
+    flex-basis: auto; /* Allow buttons to size based on content or wrap */
+    min-width: 120px; /* Ensure a minimum width */
+}
+
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    .tab-button {
+        flex-basis: 98%; /* Two buttons per row on smaller screens */
+        margin: 2px 1%; /* Small margin between buttons */
+    }
+}
+
+@media (max-width: 480px) { /* Even smaller screens */
+    .tab-button {
+        flex-basis: 98%; /* One button per row */
+    }
+}
+
+/* --- Accordion Styles for FAQ --- */
+.accordion {
+    margin-top: 20px;
+    border: 1px solid var(--border-color, #eee);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border-radius applies to all items */
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--border-color, #eee);
+}
+
+.accordion-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 18px 25px;
+    background-color: var(--background-color-light, #fdfdfd);
+    color: var(--primary-text-color, #333);
+    font-size: 1.1em;
+    font-weight: 600;
+    text-align: left;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: var(--hover-color, #f0f0f0);
+}
+
+/* Optional: Add a chevron icon for accordion headers */
+.accordion-header::after {
+    content: '\002B'; /* Plus sign */
+    font-size: 1.5em;
+    color: var(--secondary-text-color, #777);
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    content: '\2212'; /* Minus sign */
+    transform: rotate(180deg); /* Or just change to minus without rotation */
+}
+
+.accordion-content {
+    padding: 0 25px;
+    background-color: var(--card-bg-color, #ffffff);
+    max-height: 0; /* Hidden by default */
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out; /* Smooth transition */
+}
+
+.accordion-content.active {
+    max-height: 200px; /* Adjust based on expected content height */
+    padding: 15px 25px;
+    border-top: 1px solid var(--border-color, #eee);
+}
+
+.accordion-content p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--secondary-text-color, #555);
+    line-height: 1.6;
+}
+
+/* Styles for the default tutor image and text within the 'Find a Tutor' tab */
+.tutor-intro-image-wrapper {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.tutor-main-image {
+    width: 180px; /* Adjust size as needed */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color, #007bff);
+    box-shadow: var(--box-shadow, 0 4px 15px rgba(0,0,0,0.1));
+}
+
+.tutor-main-intro-text {
+    font-size: 1.2em;
+    color: var(--primary-text-color, #333);
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+/* style.css */
+
+/* --- Two-Column Layout for Find a Tutor Tab --- */
+.find-tutor-columns {
+    display: flex; /* Enables flexbox layout */
+    flex-wrap: wrap; /* Allows columns to wrap on smaller screens */
+    gap: 30px; /* Space between columns */
+    margin-top: 20px;
+}
+
+.find-tutor-input-column,
+.find-tutor-output-column {
+    flex: 1; /* Each column takes equal available space */
+    min-width: 300px; /* Ensures columns don't get too narrow on smaller screens */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.find-tutor-input-column h3,
+.find-tutor-output-column h3 {
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Styling for input groups (optional, but helps with spacing) */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block; /* Make label appear above input */
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Ensure textarea and select take full width */
+.question-textarea,
+.subject-dropdown {
+    width: calc(100% - 20px); /* Adjust for padding if any */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+/* Specific styling for the initial message in output column */
+#initial-output-message {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+    padding: 30px 10px;
+    border: 1px dashed #ddd;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    min-height: 200px; /* Provide some initial height */
+    display: flex; /* Use flexbox to center content */
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Ensure AI Feedback and Tutor Card are within the output column and handled by JS --- */
+/* (These styles should already be in your CSS from previous steps) */
+#ai-processing-feedback {
+    /* display: none; will be set by JS */
+    /* ... existing styles ... */
+    margin-top: 0; /* Remove top margin as it's now in a column */
+}
+
+#tutor-introduction-card {
+    /* display: none; will be set by JS */
+    /* ... existing styles ... */
+    margin-top: 0; /* Remove top margin as it's now in a column */
+}
+
+/* Add some responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .find-tutor-columns {
+        flex-direction: column; /* Stack columns vertically on small screens */
+    }
+    .find-tutor-input-column,
+    .find-tutor-output-column {
+        min-width: unset; /* Remove min-width when stacked */
+        padding: 15px;
+    }
+}
+
