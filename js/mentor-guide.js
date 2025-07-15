@@ -5,7 +5,27 @@ function mentorSpeak(message) {
   const container = document.getElementById("mentorResponse");
   container.innerHTML = message;
   container.scrollIntoView({ behavior: "smooth" });
+  container.classList.remove("visible");
+ 
+
+  // Force reflow to restart transition
+  void container.offsetWidth;
+
+  container.classList.add("visible");
+  
 }
+
+// Newly Addes JS    Deleted
+
+/* function mentorSpeak(message) {
+  
+  
+}
+*/
+
+
+
+
 
 // Handles top-level tab buttons (Work / Projects)
 function handleExperienceBranch(type) {
@@ -123,6 +143,7 @@ document.addEventListener("click", (e) => {
 document.body.className = "dynamic-bg";
 
 // Apply section-specific background
+let section =""
 switch (section) {
   case "summary":
     document.body.classList.add("bg-summary");
@@ -150,16 +171,4 @@ switch (section) {
     break;
 }
 
-// Newly Addes JS
 
-function mentorSpeak(message) {
-  const container = document.getElementById("mentorResponse");
-  container.classList.remove("visible");
-  container.innerHTML = message;
-
-  // Force reflow to restart transition
-  void container.offsetWidth;
-
-  container.classList.add("visible");
-  container.scrollIntoView({ behavior: "smooth" });
-}

@@ -1,4 +1,4 @@
-// mentorData.js
+// mentor-data.js
 
 const mentorData = {
   summary: `Tesfaye is a versatile professional who transitioned from manufacturing to AI and web development. His résumé reflects adaptability, growth, and creativity.`,

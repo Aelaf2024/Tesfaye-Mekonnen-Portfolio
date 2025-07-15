@@ -33,7 +33,13 @@ function handleAgent() {
   const response = respondToQuestion(input);
   document.getElementById("agentResponse").innerHTML =
     "<ul>" + response.map((r) => `<li>${r}</li>`).join("") + "</ul>";
+
 }
+
+
+
+console.log(document.getElementById("agentInput")); // should NOT be null
+
 
 document.getElementById("agentInput").value = "";
 document.getElementById("agentInput").focus();
