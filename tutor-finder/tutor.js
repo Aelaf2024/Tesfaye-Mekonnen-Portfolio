@@ -1,6 +1,10 @@
 // tutor.js
 
+<<<<<<< HEAD
 import { teachers, subjectStruggleAreas, keywordMappings } from './tutor-data.js';
+=======
+import { teachers, subjectStruggleAreas, keywordMappings } from './tutorData.js';
+>>>>>>> 5c3e0b862b2ead85bb7d5104499a874db19f5df4
 
 document.addEventListener("DOMContentLoaded", function () {
     // --- 1. Get DOM Elements ---
