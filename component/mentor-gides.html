@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesfaye Mekonnen</title>
+  <link rel="stylesheet" href="../electronics-advisor/css/electronics-advisor.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+
+  <style>
+    /* Styles for the parent container to enable equal heights */
+    .tesai-showcase {
+        display: flex; /* Makes it a flex container */
+        align-items: stretch; /* This is the key: makes direct children stretch to the height of the tallest sibling */
+        gap: 20px; /* Adds space between the columns (adjust as needed) */
+        padding: 20px; /* Add some padding around the section */
+        flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+        justify-content: center; /* Centers the items horizontally */
+    }
+
+    /* Styles for the individual blocks/cards */
+    .ai-agent.mentor-block {
+        background-color: #e0e0f0; /* Example background color, similar to screenshot */
+        border-radius: 8px; /* Rounded corners */
+        padding: 15px; /* Internal padding */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        flex: 1; /* Allows items to grow and shrink, distributing space */
+        min-width: 250px; /* Ensures a minimum width before wrapping */
+        display: flex; /* Make children flex items too for internal layout */
+        flex-direction: column; /* Stack content vertically */
+    }
+
+    /* Specific adjustments for content within blocks */
+    .tesai-image img {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Remove extra space below image */
+        border-radius: 50%; /* If you want the image circular */
+        margin-bottom: 10px;
+    }
+
+    .tesai-qa textarea {
+        width: 100%;
+        height: 100px; /* Adjust height as needed */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        resize: vertical; /* Allow vertical resizing */
+    }
+
+    .ai-agent.mentor-block li {
+        list-style: none; /* Remove bullet from button list item */
+    }
+    .ai-agent.mentor-block ul {
+        padding-left: 0; /* Remove default padding from ul */
+    }
+    .ai-agent.mentor-block ul li {
+        list-style: disc; /* Re-add disc for the list items */
+        margin-left: 20px; /* Indent list items */
+    }
+</style>
+  
+</head>
+<body>
+  <div class="title">  
+    <h1 class="site-title">AI-Powered Project ShowCase</h1>
+    <p class="site-subtitle">Mentor Gided Skills Summary </p>
+</div>
+</div>
+<header class="logo-title">
+    </nav>    <nav class="navbar">
+        <div class="language-switch">
+            <input type="checkbox" id="language-toggle" class="language-toggle">
+            <label for="language-toggle" class="language-label">
+                <span class="lang-text active-lang">EN</span>
+                <span class="lang-text">AM</span>
+                <div class="toggle-slider"></div>
+            </label>
+        </div>
+        <ul class="menu-list">
+          <li><a href="../index.html" class="nav-link">🏠 Home</a></li>
+          <li><a href="mentor-gides.html" class="nav-link">🧭 MentorGuide</a></li>
+          <li><a href="project-work.html" class="nav-link">🧪 ProjectWork</a></li>
+          <li><a href="learning.html" class="nav-link">📚 Learning Journey</a></li>
+          <li><a href="connect.html" class="nav-link">🤝 Connect</a></li>
+        </ul>
+      </ul>
+      <div class="hamburger" id="hamburger-icon">
+          &#9776;
+      </div>
+  </nav>
+
+</header>
+  
+  <main>
+    <div class="tesai-showcase"> 
+      <div class="tesai-image ai-agent mentor-block">
+        <img src="../assets/images/generate-professio.png" alt="TesAI Avatar of Tesfaye" />
+      </div>
+      <div class="tesai-qa ai-agent mentor-block">
+      <textarea id="agentInput" placeholder="e.g., What does Tesfaye know about SQL Server?"></textarea>
+      </div>
+      <div class="ai-agent mentor-block">
+        <li><button onclick="handleAgent()">Ask</button></li>
+        <h3>💬 Ask MentorGuide about Tesfaye</h3>
+        <ul>
+          <li>What does Tesfaye know about SQL Server</li>
+          <li>Web Development</li>
+          <li>AI Prompting</li>
+          <li>Data Analytics</li>
+        </ul>
+      </div>
+            <div class="ai-agent mentor-block" id="agentResponse">Try asking about: Web Development, AI Prompting, Data Analytics, or SQL Server.</div>
+    </div>
+  
+    
+  </main>
+
+
+
+
+
+
+
+
+  <footer>
+    <p>&copy; 2025 Tesfaye Mekonnen • Built with purpose and code</p>
+  </footer>
+
+ <!-- Scripts -->
+   <script src="../js/script.js"></script>
+   <script src="../js/mentor-data.js"></script>
+   <script src="../js/mentor-guide.js"></script>
+   <script src="../electronics-advisor/js/electronics-advisor.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>AOS.init();</script>
+</body>
+</html>

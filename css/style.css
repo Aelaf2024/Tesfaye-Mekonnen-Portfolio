@@ -1,0 +1,758 @@
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --accent: #007acc;
+  }
+  
+body.dark-mode {
+     --bg: #121212; 
+     --text: #eeeeee; 
+     --accent: #66ccff; } 
+body { 
+    margin: 0; font-family: Arial, sans-serif; 
+    background: var(--bg); color: var(--text); 
+    transition: background 0.3s, color 0.3s; 
+} 
+
+
+.mentor-header{
+    background-color: orange;
+    padding:25px ;
+}
+body.dark-mode footer { 
+    background: #1e1e1e; /* or any dark shade you like */ 
+    color: #eee; 
+
+} 
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+  
+  
+    nav ul { 
+            display: flex;
+            justify-content: center; /* centers items horizontally */
+            align-items: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 2rem; /* spacing handled below too */
+            list-style: none; 
+            gap: 4rem; /* increases spacing between <li>s */
+    } 
+
+       /* Hide hamburger on large screens */
+       @media (min-width: 769px) {
+        .hamburger {
+          display: none;
+        flex-direction: column; 
+        font-size: 2rem;
+        cursor: pointer; 
+    } 
+} 
+
+        nav a { color: white; 
+            text-decoration: none; 
+            font-weight: bold; 
+        } 
+           
+        .hamburger div { 
+                    width: 25px; 
+                    height: 3px; 
+                    background: white; 
+                    margin: 4px 0; 
+                } 
+                    .menu { 
+                        display: flex; 
+                    } 
+                    .top-controls { 
+                        display: flex; 
+                        align-items: center; 
+                    } 
+                        .toggle-switch { 
+                            margin-left: 1rem; 
+                            cursor: pointer; 
+                            font-size: 1.2rem; 
+                        }
+                    
+                    
+                    nav ul li {
+                     margin: 0 1.5rem;
+                    }
+                    nav ul li {
+                        margin: 0; /* reset margin if needed */
+                      }
+                      nav {
+                        flex: 1;
+                        display: flex;
+                        justify-content: center;
+                      }
+                    
+                      .top-controls {
+                        margin-left: auto;
+                      }
+                      .site-nav {
+                        position: relative;
+                      }
+                      
+                      .nav-links {
+                        display: flex;
+                        gap: 1.5rem;
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        transition: all 0.3s ease;
+                      }
+                      
+                      .nav-links li a {
+                        color: white;
+                        text-decoration: none;
+                        font-weight: bold;
+                      }
+                      
+                      .hamburger {
+                        display: none;
+                        font-size: 2rem;
+                        cursor: pointer;
+                      }
+                      
+                      .toggle-switch {
+                        margin-left: 1rem;
+                        cursor: pointer;
+                        font-size: 1.2rem;
+                      }
+
+ /* --- Responsive Styles (for screens <= 768px) --- */
+@media (max-width: 768px) {
+    header {
+        justify-content: space-between; /* Distribute items in header */
+        padding: 10px 20px; /* Adjust header padding for smaller screens */
+    }
+
+    .site-nav {
+        flex-grow: 0; /* Don't force nav to take full width */
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default on small screens */
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust based on your header's actual height */
+        right: 20px; /* Align to the right, outside the viewport initially */
+        width: 180px; /* Width of the dropdown menu */
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        transform: translateX(100%); /* Start off-screen to the right */
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+
+    /* --- Active State for Dropdown Menu --- */
+    .nav-links.active {
+        display: flex; /* Show the menu */
+        transform: translateX(0); /* Slide into view */
+        background-color: var(--card-bg-color, #ffffff); /* Distinct background for the dropdown */
+        border: 1px solid var(--border-color, #eee); /* Optional: Add a subtle border */
+    }
+
+    .nav-links li {
+        margin: 10px 0; /* Vertical spacing for menu items */
+        text-align: right; /* Align links within the dropdown */
+    }
+
+    .nav-links li a {
+        padding: 8px 12px;
+        display: block; /* Make the entire padded area clickable */
+        border-radius: 5px; /* Slightly rounded corners for links */
+        transition: background-color 0.2s ease;
+    }
+
+    .nav-links li a:hover {
+        background-color: var(--hover-color, #f0f0f0); /* Light hover background */
+    }
+
+    /* --- Hamburger Icon Visible on Small Screens --- */
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* Optional: Hamburger icon animation (e.g., transform to 'X') */
+    .hamburger.open {
+        /* You'd typically use pseudo-elements and rotations here */
+        /* For a simple &#9776;, you might just change color or add animation */
+        color: var(--accent-color, #007bff);
+    }
+}
+
+
+
+
+    nav a {
+        font-size: 0.9em;
+    }
+       
+
+nav ul {
+    justify-content: center;
+    gap: 2.5rem; /* adjust for preferred spacing */
+    display: flex;
+    justify-content: center;
+}
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+  }
+
+.projects-grid {
+margin-bottom: 4em; 
+align-items: stretch; 
+grid-template-columns: repeat(2, 1fr); 
+gap: 2em; 
+padding: 2em 1em; 
+max-width: 1200px; 
+margin: 2em auto 4em auto;
+}
+
+.tesai-image, .tesai-qa { 
+    flex: 1 1 100%; max-width: 100%; 
+}
+
+.tesai-image { 
+    text-align: center; 
+    margin-bottom: 1em; }
+
+.tesai-image img { 
+    max-width: 250px;
+
+}
+.tesai-qa textarea { 
+    min-height: 120px; 
+
+} 
+    .tesai-showcase { 
+        display: block; 
+        margin-top: 1.5em; 
+        padding-top: 1em; }
+
+
+        .menu-title {
+            text-align: center;
+            width: 100%;
+            margin: 0 auto;
+          }
+               
+
+
+
+
+/* Main content & animation */ 
+main { 
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem; 
+} 
+    .fade-in { 
+        opacity: 0; 
+        transform: translateY(20px); 
+        animation: fadeInUp 1s forwards; 
+    } 
+        .fade-in:nth-child(2) { 
+            animation-delay: 0.2s; 
+        } 
+            .fade-in:nth-child(3) { 
+                animation-delay: 0.4s; 
+            } 
+                .fade-in:nth-child(4) { 
+                    animation-delay: 0.6s; 
+                } 
+                    .fade-in:nth-child(5) { 
+                        animation-delay: 0.8s; 
+                    }
+                      
+@keyframes fadeInUp { 
+    to { opacity: 1; 
+        transform: translateY(0); 
+    } }
+
+    @keyframes typeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      #agentResponse {
+        animation: typeIn 0.4s ease-in-out;
+      }
+      
+
+.menu { 
+    position: absolute; 
+    z-index: 1000; } 
+    header { 
+        position: relative; 
+        z-index: 1100; }
+
+
+/* 🔹 About Page Sections */ 
+.about-section { 
+    background-color: rgba(173, 163, 163, 0.9); 
+    padding: 0; margin: 0 ; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); } 
+    body.dark-mode .about-section { 
+        background-color: #1e1e1e; 
+        color: var(--text); }
+
+
+/* 🔹 Certifications Grid */ 
+.certifications-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); gap: 1.5em; 
+    max-width: 1000px; 
+    margin: 1em auto 3em auto; 
+    padding: 0 1em; 
+    background-color: #f9f9f9;
+}
+
+
+    .certifications-grid {
+      width: auto;
+      height: auto;
+      
+      padding-bottom: 20px;
+      padding-top: 30px;
+    }
+@media screen and (max-width: 900px) { 
+    .certifications-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    } } 
+@media screen and (max-width: 600px) { 
+    .certifications-grid { 
+        grid-template-columns: 1fr; 
+    } 
+}
+.cert-card { 
+    background: #fff; 
+    padding: 1em; 
+    text-align: center; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease; } 
+    .cert-card:hover { 
+        transform: translateY(-5px); 
+        background-color: #f0f8ff; } .cert-card img { 
+            width: 80px; height: auto; 
+            margin-bottom: 1em; 
+        } 
+            .cert-card p {  
+                font-size: 1.2em;
+                font-weight: 700;
+                margin-bottom: 0.4em;
+
+            } 
+                .cert-card a { 
+                    display: block; 
+                    margin-top: 0.5em; 
+                    font-size: 0.9em; } 
+                    body.dark-mode .cert-card { 
+                        background-color: #1e1e1e; 
+                        color: var(--text); } 
+                        body.dark-mode .cert-card:hover { 
+                            background-color: #2a2a2a; 
+                        }
+                        .card-title {
+                            font-size: 1.2em;
+                            font-weight: 700;
+                            margin-bottom: 0.4em;
+                          }
+                          
+                          .card-desc {
+                            font-size: 0.95em;
+                            line-height: 1.4;
+                          }
+
+                        .it-card:hover {
+                            background-color: #4d5c61;
+                            color: white;
+                        }
+                        .ai-card:hover{
+                            background-color:  #5A4FC1;
+                            color: white;
+                        }
+                        .data-card:hover{
+                            background-color: #505A8D;
+                            color: white;
+                        }
+                        .web-card:hover{
+                            background-color: #2C9A;
+                            color: white;
+                        }
+
+
+/* 🔹 Footer */ 
+footer { 
+    box-shadow: 0 -1px 5px rgba(212, 201, 201, 0.1); 
+    background-color: rgb(218, 218, 223); 
+    color: white; 
+    text-align: center; 
+    padding: 1em 0; 
+    position: fixed; 
+    width: 100%; 
+    bottom: 0; 
+    border-top: 1px solid black; 
+} 
+    body.dark-mode footer { 
+        background-color: rgb(88, 88, 147); 
+        color: #ccc; } 
+
+
+/* About Me*/ 
+.about-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 2em; 
+    padding: 2em 1em; 
+    max-width: 1200px; 
+    margin: auto; }
+.about-card { 
+    background: #f8f8f8; 
+    color: #333; 
+    padding: 2em 1.5em; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease; 
+    border: 2px solid transparent; 
+    transition: border 0.3s ease, 
+    transform 0.3s ease;
+}
+
+.about-card:hover { 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1); 
+    border-color: var(--accent); /* like #00ccff */ 
+    transform: translateY(-4px);
+} 
+body.dark-mode .about-card:hover { 
+    box-shadow: 0 12px 24px rgba(0, 255, 255, 0.2); }
+.about-card p { 
+    max-width: 60ch; 
+    line-height: 1.6; }
+h3, h4 { 
+    color: #222; } 
+    a { color: var(--accent); } 
+    .about-card:hover { 
+        transform: translateY(-5px); 
+    }
+body.dark-mode .about-card { 
+    background-color: #1e1e1e; 
+    color: var(--text); 
+}
+@media screen and (max-width: 900px) { 
+    .about-grid { grid-template-columns: repeat(2, 1fr); } 
+}
+@media screen and (max-width: 600px) { 
+    .about-grid { grid-template-columns: 1fr; } 
+} 
+
+/* Projects */ 
+.projects-grid { 
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); /* Two columns */ 
+    gap: 2em; padding: 2em 1em; max-width: 1200px; 
+    margin: auto; 
+}
+.project-card { 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 1.5em; border-radius: 10px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+    display: flex; flex-direction: column; 
+    justify-content: space-between; 
+    height: 100%;
+}
+.project-card:hover { 
+    transform: translateY(-4px); 
+    transition: transform 0.3s ease, 
+    box-shadow 0.3s ease;
+}
+
+body.dark-mode .project-card { 
+    background-color: #1e1e1e; 
+    color: var(--text); } body.dark-mode .project-card:hover { 
+        box-shadow: 0 12px 24px rgba(0, 255, 255, 0.1); }
+.tags { 
+    margin: 1em 0; } .tags span { 
+        background-color: #e6f0ff; 
+        color: #003366; 
+        padding: 0.3em 0.6em; 
+        margin: 0.2em; 
+        border-radius: 5px; 
+        font-size: 0.85em; } 
+        body.dark-mode .tags span { 
+            background-color: #003366; 
+            color: #fff; } /* AI Agent*/ 
+            .agent-box { 
+                background: #fff; 
+                padding: 1.5em; margin: 2em 0; 
+                border-radius: 10px; 
+                box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            } 
+            body.dark-mode .agent-box { 
+                background: #1e1e1e; 
+                color: #f1f1f1; 
+            }
+.agent-box textarea { 
+    width: 100%; 
+    height: 500px; 
+    padding: 1em; font-size: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 8px; 
+    resize: vertical; 
+    margin: 1em 0; 
+    background-color: #fefefe; 
+    color: #333; 
+    font-family: inherit; }
+body.dark-mode .agent-box textarea { 
+    background-color: #1e1e1e; 
+    color: #f1f1f1; border: 1px solid #444; }
+.tesai-showcase { 
+    background-color:linear-gradient(to bottom right, #007acc, #005fa3);
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: center; 
+    gap: 3em; 
+    flex-wrap: wrap; /* ensures it stacks on mobile */ 
+    width: auto; 
+    height: auto; 
+    margin: 2em; 
+    padding: 2em 3em; 
+    margin-bottom: 10em; 
+    margin-top: 0px ; 
+    background-image: url('assets/some-bg.png'); 
+    background-repeat: no-repeat; 
+    background-position: right; 
+    background-size: cover; 
+}
+
+.mentor-block {
+    background-color: #bcbcdc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+.mentor-block label,
+.mentor-block button,
+.mentor-block input,
+.mentor-block textarea {
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%;
+}
+
+
+/* Slight lift on hover for dynamic feel */
+
+.ai-agent:hover, .ai-summary:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    background: #e69500; /* softer orange */
+    color: #111;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+     }
+.tesai-image { 
+    flex: 0 0 300px; 
+    text-align: center; }
+.tesai-image img { 
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 12px; 
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+.tesai-qa { 
+    flex: 1; 
+    width: 250px; 
+    height: 170px; 
+}
+.tesai-qa textarea {
+width: 100%; 
+height: 140px; 
+padding: 1em; 
+font-size: 1rem; 
+border: 1px solid #ccc; 
+border-radius: 8px; 
+resize: vertical; 
+background-color: #fff; 
+color: #333; 
+margin-bottom: 1em; 
+font-family: inherit; 
+}
+/* Textarea tweaks for slightly softer look */
+#agentInput {
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+  }
+  #agentInput:focus {
+    border-color: #007acc;
+    box-shadow: 0 0 5px rgba(0,122,204,0.5);
+  }
+
+
+
+body.dark-mode .tesai-qa textarea { 
+    background-color: #1e1e1e; 
+    color: #f1f1f1; 
+    border: 1px solid #555; }
+.tesai-qa button { 
+    background-color: var(--primary); 
+    color: blue; 
+    padding: 0.7em 1.2em; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+.tesai-qa button:hover { 
+    background-color: #005599; 
+}
+#agentResponse { 
+    
+    margin-top: 1.2em;
+    padding-bottom: 2em;
+      }
+      
+
+/* General form styling */
+.contact-section {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: var(--card-bg-color, #fff); /* Use your card background color variable */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the heading and paragraph */
+}
+
+.contact-section h2 {
+    color: var(--primary-text-color, #333); /* Use your primary text color */
+    margin-bottom: 15px;
+    font-size: 2.2em;
+}
+
+.contact-section p {
+    color: var(--secondary-text-color, #555); /* Use your secondary text color */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between form groups */
+    text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--primary-text-color, #333);
+    font-size: 1.1em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color, #ddd); /* Use a border color variable */
+    border-radius: 8px;
+    font-size: 1em;
+    color: var(--primary-text-color, #333);
+    background-color: var(--input-bg-color, #f9f9f9);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color, #007bff); /* Use your accent color */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Subtle focus shadow */
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing only */
+    min-height: 120px;
+}
+
+.submit-button {
+    background-color: var(--accent-color, #007bff); /* Use your accent color for the button */
+    color: white;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: center; /* Center the button in the column layout */
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: var(--accent-color-dark, #0056b3); /* A darker shade of your accent color */
+    transform: translateY(-2px);
+}
+
+/* Error messages */
+.error-message {
+    color: #e74c3c; /* Red color for errors */
+    font-size: 0.9em;
+    margin-top: 5px;
+    display: none; /* Hidden by default, shown by JS */
+}
+
+/* Form status messages (for success/error on submission) */
+.form-status {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    display: none; /* Hidden by default, shown by JS */
+}
+
+.form-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.form-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tesfaye Mekonnen</title>
+ <link rel="stylesheet" href="../electronics-advisor/css/electronics-advisor.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+
+
+  
+</head>
+<body>
+  <div class="title">  
+    <h1 class="site-title">AI-Powered Project ShowCase</h1>
+    <p class="site-subtitle">Mentor Gided Skills Summary </p>
+</div>
+</div>
+<header class="logo-title">
+    </nav>    <nav class="navbar">
+        <div class="language-switch">
+            <input type="checkbox" id="language-toggle" class="language-toggle">
+            <label for="language-toggle" class="language-label">
+                <span class="lang-text active-lang">EN</span>
+                <span class="lang-text">AM</span>
+                <div class="toggle-slider"></div>
+            </label>
+        </div>
+        <ul class="menu-list">
+          <li><a href="../index.html" class="nav-link">🏠 Home</a></li>
+          <li><a href="mentor-gides.html" class="nav-link">🧭 MentorGuide</a></li>
+          <li><a href="project-work.html" class="nav-link">🧪 projectWork</a></li>
+          <li><a href="learning.html" class="nav-link">📚 Learning Journey</a></li>
+          <li><a href="connect.html" class="nav-link">🤝 Connect</a></li>
+        </ul>
+      </ul>
+      <div class="hamburger" id="hamburger-icon">
+          &#9776;
+      </div>
+  </nav>
+
+</header>
+  
+  <main class="container">
+    <section class="contact-section">
+        <h2>🤝 Let's Connect</h2>
+        <p>I'm always open to new opportunities, collaborations, or just a friendly chat. Feel free to reach out!</p>
+
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/mldlereg" method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Tesfish Magna">
+                <div class="error-message" id="nameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="you@example.com">
+                <div class="error-message" id="emailError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required placeholder="Inquiry about collaboration">
+                <div class="error-message" id="subjectError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="6" required placeholder="Looking forward to discussing..."></textarea>
+                <div class="error-message" id="messageError"></div>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+            <div id="formStatus" class="form-status"></div>
+        </form>
+    </section>
+</main>
+
+
+  <footer>
+    <p>&copy; 2025 Tesfaye Mekonnen • Built with purpose and code</p>
+  </footer>
+
+   <!-- Scripts -->
+   <script src="../js/script.js"></script>
+   <script src="../js/mentor-data.js"></script>
+   <script src="../js/mentor-guide.js"></script>
+   <script src="../electronics-advisor/js/electronics-advisor.js"></script>
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <script>AOS.init();</script>
+</body>
+</html>

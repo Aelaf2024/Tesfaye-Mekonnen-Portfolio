@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Powered Electronics Advisor</title>
+    <link rel="stylesheet" href="css/electronics-advisor.css">
+    </head>
+<body>
+    <div class="title">  
+        <h1 class="site-title">AI-Powered Projects</h1>
+        
+    </div>
+    <header class="logo-title">
+        </nav>    <nav class="navbar">
+            <div class="language-switch">
+                <input type="checkbox" id="language-toggle" class="language-toggle">
+                <label for="language-toggle" class="language-label">
+                    <span class="lang-text active-lang">EN</span>
+                    <span class="lang-text">AM</span>
+                    <div class="toggle-slider"></div>
+                </label>
+            </div>
+            <ul class="menu-list">
+                <li><a href="../index.html">🏠 Home</a></li>
+                <li><a href="index.html" class="nav-link">🤖 Electronic Advisor</a></li>
+                <li><a href="../tutor-finder/index.html" id="Tutor Finder">👩‍🎓 Tutor Finder</a></li>
+                <li><a href="../component/connect.html">✉️ Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger-icon">
+                &#9776;
+            </div>
+        </nav>
+
+    </header>
+ <section class="advisor">
+            
+                <h1>Electronic Advisor</h1>
+ </section>
+
+    <main id="app-container">
+        <section id="intro-screen">
+            <h2 class="welcome-heading">Welcome! Let's find your perfect device.</h2>
+            <p class="welcome-text">
+                I'll ask you a few simple questions about what you'll use it for,
+                and then I'll tell you exactly what to look for.
+            </p>
+            <div class="device-selection">
+                <button id="select-computer" class="device-button">Computer</button>
+                <button id="select-cellphone" class="device-button">Cellphone</button>
+            </div>
+        </section>
+
+        <section id="conversation-screen" style="display:none;">
+            <div id="conversation-history" class="chat-history">
+                </div>
+            <div class="user-input-area">
+                <textarea id="user-response" placeholder="Type your answer here..."></textarea>
+                <button id="submit-response" class="submit-button">Submit</button>
+            </div>
+        </section>
+
+        <section id="results-screen" style="display:none;">
+            <h2 class="results-heading">Your Personalized Recommendation</h2>
+            <div id="customer-recap" class="results-section">
+                <h3>Your Needs As Understood By AI:</h3>
+                <p id="recap-text"></p>
+            </div>
+            <div id="ai-analysis" class="results-section">
+                <h3>AI's Detailed Analysis:</h3>
+                <p id="analysis-text"></p>
+            </div>
+            <div id="recommended-specs" class="results-section">
+                <h3>Recommended Specifications:</h3>
+                <ul id="specs-list">
+                    </ul>
+            </div>
+            <button id="start-over" class="button-primary">Start Over</button>
+            </section>
+
+        <div id="loading-indicator" class="loading-overlay" style="display:none;">
+            <div class="spinner"></div>
+            <p>AI is thinking...</p>
+        </div>
+
+
+
+    </section><section id="skill-summary-screen" class="hidden-screen">
+        <h2>My Skills Showcase</h2>
+        <div class="tabs-container">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="web-dev">Web Development</button>
+                <button class="tab-button" data-tab="ai">AI Generative & Problem Solving</button>
+            </div>
+            <div class="tab-content">
+                <div id="web-dev-content" class="tab-pane active">
+                    <h3>Web Development Skills</h3>
+                    <ul>
+                        <li><b> Front-end Development:</b> HTML5, CSS3, JavaScript (ES6+) for interactive user interfaces.</li>
+                        <li><b>DOM Manipulation:</b> Dynamically updating content, showing/hiding elements, and handling user events.</li>
+                        <li><b>Event Handling:</b> Implementing click listeners, keyboard events, and managing user input.</li>
+                        <li><b>JavaScript Fundamentals:</b> Proficient in variables, data types, arrays, objects, functions, and control flow.</li>
+                        <li><b>Modular Code Design:</b> Organizing logic into reusable functions for maintainability.</li>
+                        <li><b>Debugging & Problem Solving:</b> Identifying and resolving syntax, runtime, and logical errors using browser developer tools.</li>
+                        <li><b> Responsive Design Principles:</b> Building layouts that adapt to various screen sizes.</li>
+                    </ul>
+                </div>
+                <div id="ai-content" class="tab-pane">
+                    <h3>AI Generative & Problem Solving Skills</h3>
+                    <ul>
+                        <li><b>Conversational AI Design:</b>Structuring user-guided interactions through defined conversation states.</li>
+                        <li><b>Rule-Based AI Logic:</b> Implementing intelligent decision-making based on explicit criteria and user input.</li>
+                        <li><b>Context Management:</b> Utilizing data structures (e.g., `customerNeeds`) to maintain conversational context.</li>
+                        <li><b>Input Parsing & Interpretation:</b> Developing functions to extract meaningful data from natural language inputs (e.g., parsing budget ranges, identifying primary uses).</li>
+                        <li><b>Recommendation Engine Development:</b> Designing algorithms to match user needs with structured data to provide tailored recommendations.</li>
+                        <li><b>Iterative AI Improvement:</b> Understanding the process of refining AI behavior through testing and feedback.</li>
+                        <li><b>Data-Driven AI:</b> Recognizing the importance of well-structured and comprehensive datasets for AI functionality.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Tesfaye Mekonnen. All rights reserved.</p>
+    </footer>
+
+    <script src="js/electronics-advisor.js"></script>
+    <script>
+        // Get the current year for the footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
